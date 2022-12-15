@@ -1,13 +1,10 @@
-# Magento_AdobeStockClient module
+# MageStore_StoreWidget module
 
-The Magento_AdobeStockClient module is responsible for the communication to Adobe Stock API.
-
-## Extensibility
-
-Extension developers can interact with the Magento_AdobeStockClient module. For more information about the Magento extension mechanism, see [Magento plug-ins](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html).
-
-[The Magento dependency injection mechanism](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_AdobeStockClient module.
+The MageStore_StoreWidget module is responsible for the add new custom widget to homepage
 
 ## Additional information
 
-For information about significant changes in patch releases, see [2.3.x Release information](https://devdocs.magento.com/guides/v2.3/release-notes/bk-release-notes.html).
+Main widget type:
+- Weather widget: https://openweathermap.org/ integration
+- Currency widget: https://portal.vietcombank.com.vn/Usercontrols/TVPortal.TyGia/pXML.aspx?b=68 XML file convert to data table
+- Business news widget: https://vnexpress.net/rss/kinh-doanh.rss XML file convert to blog articles

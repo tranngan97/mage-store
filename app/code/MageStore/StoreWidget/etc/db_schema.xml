@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="open_weather_city_list" resource="default" engine="innodb" comment="Catalog Product Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="32" default="simple" comment="City Name"/>
+        <column xsi:type="varchar" name="city_id" nullable="false" length="16" comment="City ID"/>
+        <column xsi:type="varchar" name="country_code" nullable="false" length="16" comment="City Code"/>
+        <column xsi:type="varchar" name="lat" nullable="false" length="16" comment="City Lat"/>
+        <column xsi:type="varchar" name="long" nullable="false" length="16" comment="City Long"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

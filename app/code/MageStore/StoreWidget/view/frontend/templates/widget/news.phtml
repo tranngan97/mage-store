@@ -1,0 +1,12 @@
+<?php
+$news = $block->getNews();
+?>
+<div style="display: flex">
+    <?php foreach ($news as $new) :?>
+        <div class="new-article" style="border: 1px solid #008bdb; padding: 3%; width: 30%">
+            <p><?= $new['title']?></p>
+            <p><?= $new['pubDate']?></p>
+            <p><?= $new['link']?></p>
+        </div>
+    <?php endforeach; ?>
+</div>
