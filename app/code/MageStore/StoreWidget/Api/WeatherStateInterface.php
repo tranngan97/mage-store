@@ -7,10 +7,6 @@
  */
 namespace MageStore\StoreWidget\Api;
 
-use Magento\Framework\Exception\InputException;
-use Magento\Framework\Exception\NoSuchEntityException;
-use Magento\Framework\Exception\StateException;
-
 /**
  * Get weather by location.
  * @api
@@ -23,12 +19,12 @@ interface WeatherStateInterface
      *
      * @param string $lat
      * @param string $long
-     * @param string $apiKey
+     * @param $metric
      * @return bool
      */
     public function getByLatLong(
         $lat,
         $long,
-        $apiKey
+        $metric
     );
 }

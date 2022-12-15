@@ -1,39 +1,50 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="widget" translate="label" sortOrder="200">
-            <label>Mage Widget</label>
+        <tab id="magestore" translate="label" sortOrder="10">
+            <label>MageStore</label>
         </tab>
-        <section id="general" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="widget" translate="label" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Setting</label>
-            <tab>widget</tab>
-            <resource>MageStore_StoreWidget::config</resource>
-            <group id="weather_api" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Widget</label>
+            <tab>magestore</tab>
+            <resource>MageStore_Widget::configuration</resource>
+            <group id="weather" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Weather Widget</label>
-                <field id="url" translate="label comment" type="text" sortOrder="10" showInDefault="1" canRestore="1">
-                    <label>API Endpoint</label>
+                <field id="api_url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>API Url</label>
                 </field>
-                <field id="key" translate="label comment" type="text" sortOrder="20" showInDefault="1" canRestore="1">
+                <field id="api_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>API Key</label>
                 </field>
-            </group>
-            <group id="currency" translate="label" type="text" sortOrder="350" showInDefault="1" showInWebsite="1">
-                <label>Currency Widget</label>
-                <field id="link" translate="label" type="text" sortOrder="40" showInDefault="1" canRestore="1">
-                    <label>Currency Source File</label>
+                <field id="unit" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Default Metric Unit</label>
+                    <source_model>MageStore\StoreWidget\Model\Config\Source\Weather\Unit</source_model>
+                </field>
+                <field id="city" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Default City</label>
+                    <source_model>MageStore\StoreWidget\Model\Config\Source\Weather\City</source_model>
+                </field>
+                <field id="script" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Script JS Url</label>
+                </field>
+                <field id="exclude" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Exclude</label>
+                    <source_model>MageStore\StoreWidget\Model\Config\Source\Weather\Exclude</source_model>
                 </field>
             </group>
-            <group id="news" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Business News Widget</label>
-                <field id="link" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>News Source File</label>
+
+            <group id="currency" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Currency Rates</label>
+                <field id="url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Currency Document Url</label>
+                </field>
+            </group>
+
+            <group id="news" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Business News</label>
+                <field id="url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Business News Document Url</label>
                 </field>
             </group>
         </section>

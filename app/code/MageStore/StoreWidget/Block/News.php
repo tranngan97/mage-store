@@ -7,6 +7,7 @@ use MageStore\StoreWidget\Model\BusinessNewsProcessor;
  */
 class News extends \Magento\Framework\View\Element\Template
 {
+    protected $_template = 'MageStore_StoreWidget::widget/news.phtml';
     protected $businessNews;
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context

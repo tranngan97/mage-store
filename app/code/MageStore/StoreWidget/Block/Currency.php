@@ -10,6 +10,8 @@ class Currency extends \Magento\Framework\View\Element\Template
 {
     protected $currencyConvertProcessor;
 
+    protected $_template = 'MageStore_StoreWidget::widget/currency.phtml';
+
     /**
      * @param Context $context
      * @param CurrencyConvertProcessorInterface $currencyConvertProcessor
